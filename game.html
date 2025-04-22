@@ -1,0 +1,26 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h2 id="category-title"></h2>
+    <div id="board"></div>
+    <div id="keyboard" class="keyboard"></div>
+    <div id="message" class="message"></div>
+    <button id="restart-btn" class="hidden" onclick="location.reload()">Jugar otra vez</button>
+    <div id="history"></div>
+  </div>
+
+  <audio id="background-music" loop autoplay>
+    <source src="music.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

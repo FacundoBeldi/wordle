@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle Temático</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+  <div class="category-selector">
+    <h1>Elige una categoría</h1>
+    <button onclick="startGame('lol')">League of Legends</button>
+    <button onclick="startGame('cs')">Counter Strike</button>
+    <button onclick="startGame('aranjuez')">Aranjuez</button>
+  </div>
+  <audio id="background-music" loop autoplay></audio>
+  <script>
+    function startGame(category) {
+      localStorage.setItem('selectedCategory', category);
+      window.location.href = 'game.html';
+    }
+  </script>
+</body>
+</html>
