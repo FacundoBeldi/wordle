@@ -175,3 +175,30 @@ bgMusic.play().catch(() => {
   // Algunos navegadores bloquean autoplay si no hay interacción
   console.log("Autoplay bloqueado, esperando interacción del usuario.");
 });
+
+// Música que persiste entre reinicios
+window.addEventListener('DOMContentLoaded', () => {
+  const music = document.getElementById('background-music');
+
+  if (!window.musicStarted) {
+    music.play();
+    window.musicStarted = true;
+  }
+});
+
+//Boton musica
+const music = document.getElementById('background-music');
+  const muteBtn = document.getElementById('mute-btn');
+  music.volume = 0.2; // volumen bajo por defecto
+
+  function toggleMute() {
+    music.muted = !music.muted;
+    muteBtn.textContent = music.muted ? '🔇' : '🔊';
+  }
+
+  //Boton hacia atras
+
+  function goBack() {
+    window.musicStarted = false; // para que se reinicie en nueva categoría
+    window.location.href = 'index.html';
+  }

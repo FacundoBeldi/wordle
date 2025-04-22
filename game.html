@@ -15,10 +15,14 @@
     <div id="history"></div>
   </div>
 
-  <audio id="background-music" loop autoplay>
+  <audio id="background-music" loop>
     <source src="music.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
+  <button id="mute-btn" onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    🔊
+  </button>
+  <button id="back-btn" onclick="goBack()">⬅ Volver</button>
 
   <script src="words.js"></script>
   <script src="script.js"></script>

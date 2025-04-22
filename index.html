@@ -14,6 +14,9 @@
     <button onclick="startGame('aranjuez')">Aranjuez</button>
   </div>
   <audio id="background-music" loop autoplay></audio>
+  <button id="mute-btn" onclick="toggleMute()" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    🔊
+  </button>
   <script>
     function startGame(category) {
       localStorage.setItem('selectedCategory', category);
